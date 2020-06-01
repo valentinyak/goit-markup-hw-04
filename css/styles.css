@@ -16,6 +16,7 @@ ul {
 }
 a {
   display: block;
+
   text-decoration: none;
   color: var(--primery-text-color);
 }
@@ -25,20 +26,18 @@ img {
   height: auto;
 }
 h2 {
+  text-align: center;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  text-align: center;
 }
 button {
   cursor: pointer;
 }
 .container {
   width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0px auto;
+  padding: 0px 15px;
 }
 
 .visuallyhidden {
@@ -51,11 +50,11 @@ button {
   padding: 0;
   border: 0;
 }
+
+/* СТИЛИЗАЦИЯ ХЕДЕРА */
 .border-bottom {
   border-bottom: 1px solid #ececec;
 }
-
-/* Стилизация хедера */
 .header-links {
   display: flex;
   align-items: center;
@@ -67,6 +66,7 @@ button {
 }
 .logo.primery {
   margin-right: 85px;
+
   font-size: 26px;
   line-height: 1.19;
 }
@@ -87,16 +87,9 @@ button {
 .site-nav {
   display: flex;
   margin: 0px;
-  padding: 0;
+  padding: 0px;
 }
-.site-nav-link:not(:last-child) {
-  margin-right: 50px;
-}
-.site-nav a:hover,
-.site-nav a:focus {
-  color: var(--accent-color);
-}
-.site-nav-link {
+.site-nav > li {
   padding: 0px;
 
   font-weight: 500;
@@ -104,11 +97,18 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.site-nav-link > a {
+.site-nav > li:not(:last-child) {
+  margin-right: 50px;
+}
+.site-nav > li > a {
   padding: 32px 0px;
 }
+.site-nav a:hover,
+.site-nav a:focus {
+  color: var(--accent-color);
+}
 
-/* Стилизация адреса */
+/* Стилизация адреса в хедере */
 .main-addr {
   margin-left: auto;
 }
@@ -123,6 +123,7 @@ button {
 .main-addr a {
   display: flex;
   align-items: center;
+
   color: var(--gray-text-color);
   font-style: normal;
   font-weight: 500;
@@ -130,14 +131,15 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.main-addr svg {
-  fill: var(--gray-text-color);
-  margin-right: 10px;
-}
 .main-addr a:hover,
 .main-addr a:focus,
 .current {
   color: var(--accent-color);
+}
+.main-addr svg {
+  margin-right: 10px;
+
+  fill: var(--gray-text-color);
 }
 .main-addr a:hover > svg,
 .main-addr a:focus > svg {
@@ -145,13 +147,13 @@ button {
   fill: var(--accent-color);
 }
 
-/* Стилизация страницы */
+/* СТИЛИЗАЦИЯ СТРАНИЦЫ СТУДИИ */
 /* Стилизация героя */
 .hero {
   max-width: 1600px;
   height: 600px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0px auto;
+
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
@@ -163,6 +165,7 @@ button {
   width: 646px;
   margin: 0px auto;
   padding: 200px 0px;
+
   text-align: center;
 }
 .hero-title {
@@ -177,10 +180,10 @@ button {
 .hero-link {
   display: inline-block;
   min-width: 200px;
-  border-radius: 4px;
   padding: 10px 32px;
 
   background-color: var(--accent-color);
+  border-radius: 4px;
   color: var(--white-text-color);
   font-weight: 700;
   font-size: 16px;
@@ -191,6 +194,7 @@ button {
 /* Стилизация преимуществ */
 .features {
   padding: 94px 0px;
+
   border-bottom: 1px solid #ececec;
 }
 
@@ -218,7 +222,7 @@ button {
   justify-content: center;
   align-items: center;
   height: 120px;
-  margin: 0px 0px 30px;
+  margin-bottom: 30px;
 
   background: var(--secondary-bg-color);
   border-radius: 4px;
@@ -258,6 +262,7 @@ button {
   align-items: center;
   width: 370px;
   height: 70px;
+
   background: rgba(47, 48, 58, 0.8);
   color: var(--white-text-color);
   font-weight: 700;
@@ -265,14 +270,15 @@ button {
   text-transform: uppercase;
 }
 .our-work-description p {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Стилизация команды */
 .our-team {
   margin: 0px;
   padding: 94px 0px;
+
   background: var(--secondary-bg-color);
 }
 .our-team-title {
@@ -287,6 +293,7 @@ button {
 .our-team-list > li {
   width: calc((100%-30 * 3) / 4);
   padding-bottom: 36px;
+
   background-color: var(--white-text-color);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -294,10 +301,10 @@ button {
   overflow: hidden;
 }
 .our-team-list > li:not(:last-child) {
-  margin: 0px 30px 0px 0px;
+  margin-right: 30px;
 }
 .our-team-foto {
-  margin: 0px 0px 30px;
+  margin-bottom: 30px;
 }
 .our-team-name {
   margin: 0px 0px 10px;
@@ -333,6 +340,7 @@ button {
   align-items: center;
   width: 44px;
   height: 44px;
+
   background: var(--white-text-color);
   border-radius: 50%;
 }
@@ -368,6 +376,7 @@ button {
   align-items: center;
   width: 170px;
   height: 90px;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -375,13 +384,13 @@ button {
   fill: #afb1b8;
 }
 .clients-list a:hover {
-  border: 1px solid #2196f3;
+  border: 1px solid var(--accent-color);
 }
 .clients-list a:hover > svg {
   fill: var(--accent-color);
 }
 
-/* Стилизация страницы портфолио */
+/* СТИЛИЗАЦИЯ СТРАНИЦЫ ПОРТФОЛИО */
 .main-portofolio {
   padding: 94px 0px;
 }
@@ -411,14 +420,16 @@ button {
   display: inline-block;
 }
 .projects-list-content {
+  padding: 20px 24px;
+
   border: 1px solid #eeeeee;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top: none;
-  padding: 20px 24px;
 }
 .project-title {
   margin: 0px 0px 4px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -426,6 +437,7 @@ button {
 }
 .project-type {
   margin: 0px;
+
   color: var(--gray-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -433,6 +445,7 @@ button {
 }
 .project-description {
   margin: 0px;
+
   color: var(--white-text-color);
   background: rgba(33, 150, 243, 0.9);
   font-weight: 400;
@@ -452,6 +465,7 @@ button {
 }
 .portfolio-button {
   padding: 6px 22px;
+
   color: var(--primery-text-color);
   font-weight: 500;
   font-size: 16px;
@@ -466,23 +480,24 @@ button {
   color: var(--white-text-color);
 }
 
-/* Стилизация футера */
-/* Стилизация футера */
+/* СТИЛИЗАЦИЯ ФУТЕРА */
 footer {
+  padding: 48px 0px 21px;
+
   background-color: #2f303a;
-  padding-top: 48px;
-  padding-bottom: 21px;
 }
 .footer-links {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
+  align-items: baseline;
   margin-bottom: 18px;
   padding-bottom: 28px;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .addr-map {
   margin-bottom: 9px;
+
   color: var(--white-text-color);
   font-style: normal;
   font-size: 14px;
@@ -490,6 +505,7 @@ footer {
 }
 .addr-email {
   margin-bottom: 9px;
+
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 14px;
@@ -503,6 +519,7 @@ footer {
 }
 .follow {
   margin: 0px 0px 21px;
+
   color: var(--white-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -521,6 +538,7 @@ footer {
   align-items: center;
   width: 44px;
   height: 44px;
+
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
 }
@@ -558,10 +576,10 @@ footer {
   height: 50px;
   margin: 0px;
   padding: 0px;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-width: 0px;
-
   background-color: var(--accent-color);
   color: var(--white-text-color);
   font-family: inherit;
@@ -575,6 +593,7 @@ footer {
 }
 .developed {
   margin: 0px;
+
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   line-height: 2;
